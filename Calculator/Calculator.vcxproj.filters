@@ -15,15 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Calculator.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Term.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Term.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NonNumericTermException.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
