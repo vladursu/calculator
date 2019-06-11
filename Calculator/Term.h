@@ -3,17 +3,20 @@
 
 class Term {
 public:
-  explicit Term(std::string term);
+  Term();
+  Term(std::string term);
+  Term(const char* term);
   ~Term() = default;
 
   bool isValid() const;
 
-  int getAsInt() const;
+  int get() const;
+  void set(std::string term);
 
   int add(const int number) const;
 
 private:
-  int termAsInt;
+  int term;
   bool valid;
 };
 
