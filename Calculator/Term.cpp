@@ -1,19 +1,28 @@
 #include "Term.h"
-#include "NonNumericTermException.h"
+#include "InvalidTermException.h"
 
-#include <exception>
+Term::Term(std::string term)
+  : valid(true)
+{
+  try {
+    termAsInt = std::stoi(term);
+  } catch (...) {
+    valid = false;
+  }
+}
 
-
-Term::Term(std::string term) 
-  : termAsString(term)
-{}
+bool Term::isValid() const {
+  return valid;
+}
 
 int Term::getAsInt() const {
-  int number;
-  try {
-    number = std::stoi(termAsString);
-  } catch (std::exception e) {
-    throw NonNumericTermException(e);
+  if (isValid()) {
+    return termAsInt;
+  } else {
+    throw InvalidTermException();
   }
-  return number;
+}
+
+int Term::add(const int number) const {
+  return getAsInt() + number;
 }

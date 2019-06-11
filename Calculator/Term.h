@@ -6,9 +6,14 @@ public:
   explicit Term(std::string term);
   ~Term() = default;
 
+  bool isValid() const;
+
   int getAsInt() const;
 
+  int add(const int number) const;
+
 private:
-  std::string termAsString;
+  int termAsInt;
+  bool valid;
 };
 

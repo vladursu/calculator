@@ -23,7 +23,7 @@
     <ClInclude Include="Term.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="NonNumericTermException.h">
+    <ClInclude Include="InvalidTermException.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
